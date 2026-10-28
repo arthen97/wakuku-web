@@ -1,5 +1,5 @@
 {
-  "version": "0.10.4",
+  "version": "0.10.5",
   "date": "2026-10-29",
   "engine": "Godot 4.7.2 WebGL 2 / single thread",
   "aspect": "21:9",
@@ -806,8 +806,8 @@
     },
     {
       "path": "scripts/planet_world.gd",
-      "bytes": 12065,
-      "sha256": "14bdd8e9fd9695bd1fd09bebae347d5610ff7ab5381aa4b6bae53d899380b2c7"
+      "bytes": 12894,
+      "sha256": "56fedd107c87964f1c5f2c5cd9fba2c50b8873e1cca12c5a1fe5c9bd83556d0b"
     },
     {
       "path": "shaders/butterfly.gdshader",
@@ -855,5 +855,5 @@
       "sha256": "d82340eed0e342fcc7f2fdbf51df06f35eb3b1d2ff95ddcc884f5ccf8f9041a2"
     }
   ],
-  "pack_sha256": "30b8dd3781cea837cf68cba89ba11e22b49147a579106e167210f2f5b5ec119f"
+  "pack_sha256": "b98d01bc4234439a6ff6c6ed34ad97a69bdbb2e253f74714f714d3722de5a527"
 }

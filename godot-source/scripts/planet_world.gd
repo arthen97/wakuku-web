@@ -142,6 +142,7 @@ func _collect(n: Node, parent: Transform3D, out: Array, atom: String) -> void:
 				material.roughness=maxf(material.roughness,.78)
 				material.metallic_specular=.16
 				material.texture_filter=BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+				_apply_stone_finish(material,atom)
 				if material.transparency!=BaseMaterial3D.TRANSPARENCY_DISABLED:
 					material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 					material.alpha_scissor_threshold=.42
@@ -155,6 +156,28 @@ func _collect(n: Node, parent: Transform3D, out: Array, atom: String) -> void:
 			mesh.surface_set_material(s,material)
 		out.append({"mesh":mesh,"transform":tr})
 	for child in n.get_children(): _collect(child,tr,out,atom)
+
+func _apply_stone_finish(material: BaseMaterial3D, atom: String) -> void:
+	# Keep the imported UVs, texture detail and three paving hues. Reduce stone
+	# reflectance locally so the meadow and sky keep their current brightness.
+	var tint:Color
+	if atom.begins_with("rock_"):
+		tint=Color(.76,.78,.77)
+	elif atom=="paving_limestone":
+		tint=Color(.76,.78,.77)
+	elif atom=="paving_slate":
+		tint=Color(.79,.81,.82)
+	elif atom=="paving_sandstone":
+		tint=Color(.82,.83,.83)
+	elif atom=="meadow_stonewall" or atom=="village_foundations" or "stone" in material.resource_name.to_lower():
+		tint=Color(.84,.85,.84)
+	else:
+		return
+	material.albedo_color*=tint
+	material.metallic=0.0
+	material.metallic_specular=.07
+	material.roughness=maxf(material.roughness,.96)
+	material.emission_enabled=false
 
 func _lighting() -> void:
 	var worldenv:=WorldEnvironment.new()

@@ -4,7 +4,7 @@ A small planet story about tending one flower, repairing a wind bell and making 
 
 [Play online](https://p0itacli4cxv.app.stg.medeo.ai/)
 
-## V10.4 — 2026-10-29
+## V10.5 — 2026-10-29
 
 The Godot cinematic preview is now a complete HTML / WebGL 2 release. Only Moss and Windbell Meadow are currently playable; four travellers and two destinations remain clearly marked previews.
 
@@ -64,3 +64,7 @@ Deployment repository, not a standalone asset library. Third-party content retai
 ### v0.10.4 clarity and resource efficiency
 
 Reduced ground overbrightening, exposure 0.76 and sunlight 0.95. 4x MSAA and foliage alpha-to-coverage, Retina-aware canvas up to 2520×1080, fixed 550-weight Chinese font with MSDF rendering. Identical texture images are shared, runtime images use Basis Universal compression, unused legacy resources remain in the authoring project. Near pixels skip the distance blur; far pixels use four samples.
+
+### v0.10.5 matte stone materials
+
+Rock, limestone, sandstone and slate retain their original geometry and surface detail with lower local albedo. Stone uses non-metallic, roughness ≥0.96, specular 0.07 and no emission; sky and meadow illumination are unchanged.
