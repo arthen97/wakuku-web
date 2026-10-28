@@ -1,8 +1,8 @@
 {
   "loader": "unity/Build/unity.loader.js?v=4a711fc45b4e",
   "framework": "unity/Build/unity.framework.js?v=aa13f2bd0b0e",
-  "data": "unity/Build/unity.data?v=8a0cd11caf99",
-  "wasm": "unity/Build/unity.wasm?v=d1243a30e207",
+  "data": "unity/Build/unity.data?v=959290800900",
+  "wasm": "unity/Build/unity.wasm?v=ce79db7c52a2",
   "characters": [
     "moss"
   ]
