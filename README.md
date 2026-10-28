@@ -4,6 +4,14 @@ A small exploration game about gathering heart threads and restoring wind bells.
 
 [Play online](https://p0itacli4cxv.app.stg.medeo.ai/)
 
+## V9.1 — 2026-10-28
+
+- Flower and fine-grass drifts use seeded, warped ecology fields with sparse, irregular edges.
+- 18 supplied butterflies follow flowers, pause to perch and flutter away from the player.
+- Grass and flowers bend under grounded footsteps and recover gradually; batched GPU deformation preserves movement collision.
+- Three coordinated paving materials — limestone, slate and sandstone — vary in mesh shape, size, orientation and spacing.
+- Existing castle, cottages, cover, HUD map and Chinese audio retained.
+
 ## V9 — 2026-10-28
 
 - New single cover featuring Moss, the valley and the bell castle.
@@ -24,9 +32,10 @@ The Unity WebGL output and UI are prebuilt. No runtime AI service or API keys ar
 - `v0.7.0`: preserved original baseline, previously published as menv v1.
 - `v0.8.0`: architecture and sound update; preserved as menv v2.
 - `v0.9.0`: village, botanical cards, clouds, Moss cover and map.
+- `v0.9.1`: natural planting, butterflies, foot-contact vegetation and irregular three-color paving.
 
 The castle is an exterior landmark; there is no interior level. The cover is an illustration, not a game screenshot.
 
 ## Rights
 
-Deployment repository, not a standalone asset library. Third-party content retains its original terms. See [Credits](docs/CREDITS.md) and [V8 additions](docs/CREDITS-V8.md) and [V9 additions](docs/CREDITS-V9.md). Editable Unity and Blender authoring files remain in the local project.
+Deployment repository, not a standalone asset library. Third-party content retains its original terms. See [Credits](docs/CREDITS.md) and [V8 additions](docs/CREDITS-V8.md) and [V9 additions](docs/CREDITS-V9.md). See also [V9.1 additions](docs/CREDITS-V9.1.md). Editable Unity and Blender authoring files remain in the local project.
