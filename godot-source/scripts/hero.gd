@@ -134,7 +134,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and active and (free_look or Input.mouse_mode==Input.MOUSE_MODE_CAPTURED or drag_look):
 		# Unscaled screen motion keeps sensitivity stable at every browser/window size.
 		camera_yaw=wrapf(camera_yaw-event.screen_relative.x*.0026,-PI,PI)
-		camera_pitch=clampf(camera_pitch-event.screen_relative.y*.0023,-1.12,.38)
+		camera_pitch=clampf(camera_pitch-event.screen_relative.y*.0023,-1.12,0.0)
 
 func _physics_process(dt: float) -> void:
 	var captured:=Input.mouse_mode==Input.MOUSE_MODE_CAPTURED

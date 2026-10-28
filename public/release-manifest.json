@@ -1,5 +1,5 @@
 {
-  "version": "0.10.1",
+  "version": "0.10.2",
   "date": "2026-10-28",
   "engine": "Godot 4.7.2 WebGL 2 / single thread",
   "aspect": "21:9",
@@ -872,7 +872,7 @@
     {
       "path": "scripts/hero.gd",
       "bytes": 10688,
-      "sha256": "e03eda8be3bbc9ba3a341980b218a8c782fd1924289a6014d1d9f17df5355875"
+      "sha256": "a1d69af13a3446cc607e1767544132b554c05b16a085d98f184f033de37ff778"
     },
     {
       "path": "scripts/journey_menu.gd",
@@ -935,5 +935,5 @@
       "sha256": "d82340eed0e342fcc7f2fdbf51df06f35eb3b1d2ff95ddcc884f5ccf8f9041a2"
     }
   ],
-  "pack_sha256": "9fd7a16377d36a9521ee997ac3fa4cd35eea7c7d939adb87171f494f0ff67aaf"
+  "pack_sha256": "e9ed88896aa24773387305a33acb8ac3ccecbb7d6b9aa15991b52106077587d8"
 }

@@ -4,7 +4,7 @@ A small planet story about tending one flower, repairing a wind bell and making 
 
 [Play online](https://p0itacli4cxv.app.stg.medeo.ai/)
 
-## V10.1 — 2026-10-28
+## V10.2 — 2026-10-28
 
 The Godot cinematic preview is now a complete HTML / WebGL 2 release. Only Moss and Windbell Meadow are currently playable; four travellers and two destinations remain clearly marked previews.
 
@@ -44,7 +44,7 @@ The Godot WebGL runtime, assets and UI are prebuilt. No runtime AI service or AP
 
 ## Versions
 
-- `v0.10.0`: Godot HTML cinematic chapter. Earlier Unity versions remain available in their original tags.
+- `v0.10.2`: Godot HTML cinematic chapter, five character posters, free mouse camera and safe camera pitch. Earlier Unity versions remain available in their original tags.
 
 - `v0.7.0`: preserved original baseline, previously published as menv v1.
 - `v0.8.0`: architecture and sound update; preserved as menv v2.
