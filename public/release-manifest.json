@@ -1,0 +1,939 @@
+{
+  "version": "0.10.1",
+  "date": "2026-10-28",
+  "engine": "Godot 4.7.2 WebGL 2 / single thread",
+  "aspect": "21:9",
+  "instances": 56876,
+  "bones": 25,
+  "actions": [
+    "idle",
+    "walk",
+    "run",
+    "jump",
+    "pickup_ground",
+    "look_distance",
+    "goodbye",
+    "talk",
+    "laugh"
+  ],
+  "content": "Same quest, world, character, sounds, textures and menu data as the native cinematic preview",
+  "rendering_adaptation": [
+    "Depth-aware light blur replaces native camera DOF",
+    "Crossed transparent sun shafts replace volumetric fog",
+    "ACES, color curve, glow, depth fog and creek caustics retained"
+  ],
+  "save": "IndexedDB plus localStorage mirror and JSON export/import; native save can be imported, never distributed to other players",
+  "source_files": [
+    {
+      "path": "README.md",
+      "bytes": 3404,
+      "sha256": "2ce969fa766789f26993cc4e5247c1c69942b43c42088aac08ba2efbdb900064"
+    },
+    {
+      "path": "assets/audio/Footsteps/earth/step-0.ogg",
+      "bytes": 5122,
+      "sha256": "655fc6ac95e40bda757f8cd4611db03ccfd2c02a1c36430101a7c0ad766375bb"
+    },
+    {
+      "path": "assets/audio/Footsteps/earth/step-1.ogg",
+      "bytes": 5237,
+      "sha256": "8e720f87f33bb47c5e5fce66eabac23c8fbe95bc1fff4ee9d348bf9214e3bf6a"
+    },
+    {
+      "path": "assets/audio/Footsteps/earth/step-2.ogg",
+      "bytes": 5251,
+      "sha256": "1a28465c4d725e55a47d3acca451aa7b7775932464aba2c155bb35b00155f4fa"
+    },
+    {
+      "path": "assets/audio/Footsteps/earth/step-3.ogg",
+      "bytes": 4958,
+      "sha256": "a3005c2a53044f4f9a6600ab0ab2ba70a37d443f91a2783876c6703cdca53ffe"
+    },
+    {
+      "path": "assets/audio/Footsteps/earth/step-4.ogg",
+      "bytes": 4815,
+      "sha256": "5c36919d9bdb377c8790c4c024dc6d081b02de47699bd573657e431a195f719c"
+    },
+    {
+      "path": "assets/audio/Footsteps/grass/step-0.ogg",
+      "bytes": 5406,
+      "sha256": "dfb0629fae82a7b7fed7a9d085fec2c6f844e16efa4eab3be7ad99ca4a4d6a1b"
+    },
+    {
+      "path": "assets/audio/Footsteps/grass/step-1.ogg",
+      "bytes": 5318,
+      "sha256": "c6b4e8f49602223daa4edd0853373cb7694e80f29f52dfac00a6ac7c322bf9a8"
+    },
+    {
+      "path": "assets/audio/Footsteps/grass/step-2.ogg",
+      "bytes": 5372,
+      "sha256": "710c1da2c2169e13d1fc0165d18d13eb7cf4fed588443ea6432049749ca82a19"
+    },
+    {
+      "path": "assets/audio/Footsteps/grass/step-3.ogg",
+      "bytes": 5201,
+      "sha256": "4a9578a65d197198fb870c0aece6064718c45dcd925c714e276e1f8e8c31a37f"
+    },
+    {
+      "path": "assets/audio/Footsteps/grass/step-4.ogg",
+      "bytes": 5103,
+      "sha256": "1e0736eec6e8b0d47753fdd3a3329f618f7749d6ce84d4f23d4f13a717552766"
+    },
+    {
+      "path": "assets/audio/Footsteps/wood/step-0.ogg",
+      "bytes": 5055,
+      "sha256": "0afa356956ac630fbf3b1f867e6bb5c87b0363107c28960e38e50a4bd8478360"
+    },
+    {
+      "path": "assets/audio/Footsteps/wood/step-1.ogg",
+      "bytes": 4513,
+      "sha256": "9147a71e6cec2483b78ba585fa9ce8a545b86c36879d0411b185c3860eadb153"
+    },
+    {
+      "path": "assets/audio/Footsteps/wood/step-2.ogg",
+      "bytes": 4418,
+      "sha256": "e334918183d584be6465cc8db441da49c88c643aae75b984cb28d20c50e4c50c"
+    },
+    {
+      "path": "assets/audio/Footsteps/wood/step-3.ogg",
+      "bytes": 4761,
+      "sha256": "63312a5a39cf7f2a31ed67248a077560540ea5224feab9b0680f2dc18acaf1f9"
+    },
+    {
+      "path": "assets/audio/Footsteps/wood/step-4.ogg",
+      "bytes": 4391,
+      "sha256": "d5830844ebd144b6bd8a3613e02b2891ba2078fc0f43b3c47e8bb6de4f52b092"
+    },
+    {
+      "path": "assets/audio/collect.ogg",
+      "bytes": 29681,
+      "sha256": "6d55602601f66bb6e66c69273e9b085ce5b5fcb4d399c676e104726274119971"
+    },
+    {
+      "path": "assets/audio/creek.ogg",
+      "bytes": 265518,
+      "sha256": "653d13db1e0250967af82b53b227e253b63b97cec1ee4c2f7789b20babac4efd"
+    },
+    {
+      "path": "assets/audio/footstep.ogg",
+      "bytes": 8562,
+      "sha256": "b4261f147f3e0eee886f3d6dc8d26f2c4f6cf340f45468471432aaac499659d1"
+    },
+    {
+      "path": "assets/audio/jump-hey.ogg",
+      "bytes": 20020,
+      "sha256": "523ae761294033e8cafc15059845ac68b72d6123bec19c39837d3627c39aa531"
+    },
+    {
+      "path": "assets/audio/jump-hoo.ogg",
+      "bytes": 22062,
+      "sha256": "13b52101413f2d3f0884453c3a796635a5db14628310728f5030342490775898"
+    },
+    {
+      "path": "assets/audio/jump-waku.ogg",
+      "bytes": 21792,
+      "sha256": "6b3b25d1ebfd26af1bf9d330654a5f9a2e67a57397c0bfd83c155fad2846d177"
+    },
+    {
+      "path": "assets/audio/jump.ogg",
+      "bytes": 11046,
+      "sha256": "e1d52f1975129614a5c8564da2a2162a42203357c85376aea2d567c740878eaa"
+    },
+    {
+      "path": "assets/audio/opening.ogg",
+      "bytes": 404476,
+      "sha256": "068a77aafd503052cfa46b7512d3d88efbd075dd0e7a64a8a992e8a90d4e78e8"
+    },
+    {
+      "path": "assets/audio/planet-bell.ogg",
+      "bytes": 104255,
+      "sha256": "0f0403c6af5ef91fd32e8e740f03673cf89213812de9bdc2130998a50daa25b9"
+    },
+    {
+      "path": "assets/audio/planet-end.ogg",
+      "bytes": 116694,
+      "sha256": "1c04ff8564d68d1cdb3e743e894cf888bc3bcfa41e27b486afe3b235f9d3d5e4"
+    },
+    {
+      "path": "assets/audio/planet-flower.ogg",
+      "bytes": 95457,
+      "sha256": "fcfb074ada8207c1d6d9549504fe4383af43225d513fb1f91e0c7fc844479cc1"
+    },
+    {
+      "path": "assets/audio/planet-intro.ogg",
+      "bytes": 123221,
+      "sha256": "1cd3293c1c055b4d7bb6bb869630d0c7bf411a3ed1f56b9fa5243dc7c8e582dd"
+    },
+    {
+      "path": "assets/audio/repair.ogg",
+      "bytes": 53464,
+      "sha256": "0d5e3b767e78a91aef04d789c529b21d1aa75c91020cd886cfe0c04f019543e7"
+    },
+    {
+      "path": "assets/audio/ui-select.ogg",
+      "bytes": 7901,
+      "sha256": "7a26526236b62c87e8df45df43cf7787acec0842f82e8844b62441cd06da452c"
+    },
+    {
+      "path": "assets/audio/valley-score.ogg",
+      "bytes": 838490,
+      "sha256": "441e12fd430df26b860e1ed7ff3b23f601d51b7cb9a4018561fc230ca2c4d87e"
+    },
+    {
+      "path": "assets/audio/voice-brand.ogg",
+      "bytes": 41624,
+      "sha256": "5ceb882332af876ad1f77f2abdc566bcede55ab86d53f56bcb80511915ec6b34"
+    },
+    {
+      "path": "assets/audio/voice-finish.ogg",
+      "bytes": 68423,
+      "sha256": "ae07883a8cf7d8f0ab64c31e0059e39408c4824dc5f5fe16fe94d6a3cab6bff5"
+    },
+    {
+      "path": "assets/audio/voice-hello.ogg",
+      "bytes": 68586,
+      "sha256": "f444266bbe3086b01cb41afc7da8fd9b98ccf6f05cba06568d544ba2e55fa4ea"
+    },
+    {
+      "path": "assets/audio/voice-hint.ogg",
+      "bytes": 53331,
+      "sha256": "e45b6f7e8f854ca3f956dacc1ce2acf7f3244307b3fb826665bd18332f502591"
+    },
+    {
+      "path": "assets/audio/voice-mend.ogg",
+      "bytes": 41126,
+      "sha256": "b823a1890b0f733bf27b0507afab6f4cc08047abc5096991058ad1fc4b8db46f"
+    },
+    {
+      "path": "assets/audio/voice-return.ogg",
+      "bytes": 37686,
+      "sha256": "ee05d81798b399508e202b185083cd5b46f5f0a4be9395e3cf815ece3e87d116"
+    },
+    {
+      "path": "assets/audio/voice-thread.ogg",
+      "bytes": 52110,
+      "sha256": "7d9a272307376ec63c084109fdc3d2486f4566247fe6f4981b32b730066d1b7e"
+    },
+    {
+      "path": "assets/models/bell_castle.glb",
+      "bytes": 19806964,
+      "sha256": "e5914668f25acf45619906c599a967e36a07a1bd5a0b7e226232c8cb7ee5b0d0"
+    },
+    {
+      "path": "assets/models/bell_castle_bell_castle__painted_0.png",
+      "bytes": 19239085,
+      "sha256": "7a7af4aa0c7f06db9922791f73da362907b7b1d211ee85b8004b472c553b7dfd"
+    },
+    {
+      "path": "assets/models/bellkeeper_house.glb",
+      "bytes": 18053432,
+      "sha256": "350d3b14ad71ce0a48e2425ef09323abf8ea64ebeda1a957314ee4ccedc6a84d"
+    },
+    {
+      "path": "assets/models/bellkeeper_house_bellkeeper_house__painted_0.png",
+      "bytes": 17682582,
+      "sha256": "311d2f97233cc2b50e45f629510276d6b89751bd280a89c68abde398b2a3a90e"
+    },
+    {
+      "path": "assets/models/botanical_flowers_cosmos.glb",
+      "bytes": 2710984,
+      "sha256": "382dda3e05de9345f0d56d571de56f0d4daf805f54817c29d413d752edac5bd0"
+    },
+    {
+      "path": "assets/models/botanical_flowers_cosmos_BotanicalAtlas.png",
+      "bytes": 2708975,
+      "sha256": "73cb06e40d325bc08cc0abce06c5485800b202ca884f1ded9f59631b2d1b9a77"
+    },
+    {
+      "path": "assets/models/botanical_flowers_daisy.glb",
+      "bytes": 2710976,
+      "sha256": "99df7fc5e52fad1f36ae70c3b2e752310860a377dc307ebccacf3df1f355701e"
+    },
+    {
+      "path": "assets/models/botanical_flowers_daisy_BotanicalAtlas.png",
+      "bytes": 2708975,
+      "sha256": "73cb06e40d325bc08cc0abce06c5485800b202ca884f1ded9f59631b2d1b9a77"
+    },
+    {
+      "path": "assets/models/botanical_flowers_fern.glb",
+      "bytes": 2710952,
+      "sha256": "297531b2f4803acca7ffa9ab4b5527db2a6b995d201e554a9d9467e18b38fc21"
+    },
+    {
+      "path": "assets/models/botanical_flowers_fern_BotanicalAtlas.png",
+      "bytes": 2708975,
+      "sha256": "73cb06e40d325bc08cc0abce06c5485800b202ca884f1ded9f59631b2d1b9a77"
+    },
+    {
+      "path": "assets/models/botanical_flowers_lupine.glb",
+      "bytes": 2710984,
+      "sha256": "819886bb77bf02d89eb5430b89e34371c13b02185648019c8beb326ad4ee549e"
+    },
+    {
+      "path": "assets/models/botanical_flowers_lupine_BotanicalAtlas.png",
+      "bytes": 2708975,
+      "sha256": "73cb06e40d325bc08cc0abce06c5485800b202ca884f1ded9f59631b2d1b9a77"
+    },
+    {
+      "path": "assets/models/cloud_cumulus_soft.glb",
+      "bytes": 2677584,
+      "sha256": "d96f88763858e244a91ba70c22971d631a63b16e32edd151d0de673851aed58b"
+    },
+    {
+      "path": "assets/models/creek_water.glb",
+      "bytes": 249204,
+      "sha256": "035afe1da14ee7fda97c5ea2a719ea7f238f40fc8374bc9b9b20ea4513559abb"
+    },
+    {
+      "path": "assets/models/flora_bracken.glb",
+      "bytes": 6131844,
+      "sha256": "569a4c2ef599f076fb3c2eeb166aed8c7f7e2c12d723be01825de62e5850a9bc"
+    },
+    {
+      "path": "assets/models/flora_bracken_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_bush.glb",
+      "bytes": 6074612,
+      "sha256": "3fc84acbca11f6223f8d8184852f27831917c15c9202e2372fd7488178c4c832"
+    },
+    {
+      "path": "assets/models/flora_bush_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_fern.glb",
+      "bytes": 6209440,
+      "sha256": "ba4bee350f5992a6711b2a783d16bdb5af45b31b2b6c8f9dd041c3a276aea15b"
+    },
+    {
+      "path": "assets/models/flora_fern_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_finegrass.glb",
+      "bytes": 6055572,
+      "sha256": "7f4d730bce6c2e0886896e0f3d25803f0446f51b776869e11099e71aeba3206d"
+    },
+    {
+      "path": "assets/models/flora_finegrass_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_sedge.glb",
+      "bytes": 6062100,
+      "sha256": "3b2678308bbf1bd407277e1ae49fa4db097bf442846f8e9e9df9c5ea447a7f65"
+    },
+    {
+      "path": "assets/models/flora_sedge_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_starflower.glb",
+      "bytes": 6071520,
+      "sha256": "276e52a1a0c350b8077a07363f837b3f4b889cd87129c160f02c6d66ac8d04aa"
+    },
+    {
+      "path": "assets/models/flora_starflower_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/flora_wildflower.glb",
+      "bytes": 6057588,
+      "sha256": "398fdda71af0a69b42407e4d3fa99ad90728205fcceebff067b8ffb2cddb44f6"
+    },
+    {
+      "path": "assets/models/flora_wildflower_Flora_1.png",
+      "bytes": 6052691,
+      "sha256": "1b7a9396a92442b4213c1b20339a5e91cdd196eb9d545eeeaf2219f5db68a695"
+    },
+    {
+      "path": "assets/models/garden_house.glb",
+      "bytes": 18683580,
+      "sha256": "0680a7b594343a8e51d3761666ccb0c6afe6b60806e9446cc760d7f7f51ec62e"
+    },
+    {
+      "path": "assets/models/garden_house_garden_house__painted_0.png",
+      "bytes": 18298930,
+      "sha256": "57b257054a3f0f5e6192b8be35c1053a3aec809afab3b28f34bd92f87f340ac3"
+    },
+    {
+      "path": "assets/models/grass_leafsLarge.glb",
+      "bytes": 12968,
+      "sha256": "acadc02886269a561e93a0c38913bc3ba36f605e330528cafd87235b3424cda0"
+    },
+    {
+      "path": "assets/models/meadow_birch.glb",
+      "bytes": 496148,
+      "sha256": "75720288a7b6987921a0692c50e62471c934ba93ac29367b3cac8faa21ce514d"
+    },
+    {
+      "path": "assets/models/meadow_birch_Birch_Trunk_Texture.png",
+      "bytes": 82085,
+      "sha256": "81e34503dbcf7034d97d1e4018b80b016770143042e78adb19076332e18dad40"
+    },
+    {
+      "path": "assets/models/meadow_birch_Branches_01.png",
+      "bytes": 90270,
+      "sha256": "771c1dbcce86139d8d362d396421f781de0ffe07bbf7c54ee605a603fd232823"
+    },
+    {
+      "path": "assets/models/meadow_birch_leafPatch_01.png",
+      "bytes": 34354,
+      "sha256": "42428786b126dedde97903851f7c835b95d4c4475859a76d487ac97efdc4cf06"
+    },
+    {
+      "path": "assets/models/meadow_birdhouse.glb",
+      "bytes": 1898832,
+      "sha256": "499366ff7765abd7af2de4fbf9c59af6df9f0fd2569fda0595b3b3b827620258"
+    },
+    {
+      "path": "assets/models/meadow_birdhouse_PolygonNatureBiomes_Meadow_Texture_01.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/meadow_bush.glb",
+      "bytes": 2024248,
+      "sha256": "d1b714eca40392cedfe4dd4e1a1a263c9280758ed0acd99a0d70f24da351f40b"
+    },
+    {
+      "path": "assets/models/meadow_bush_PolygonNatureBiomes_Meadow_Texture_01.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/meadow_bush_leafPatch_01.png",
+      "bytes": 34354,
+      "sha256": "42428786b126dedde97903851f7c835b95d4c4475859a76d487ac97efdc4cf06"
+    },
+    {
+      "path": "assets/models/meadow_flowers.glb",
+      "bytes": 662312,
+      "sha256": "f7c7528e13b2eb421b255da6fa8923940f70810c4e6bd9092aca68d92d38549b"
+    },
+    {
+      "path": "assets/models/meadow_flowers_FlowersFlat_01.png",
+      "bytes": 660129,
+      "sha256": "10320daec494bee243e4d9dac25d36c67ae2618e4a3eb423b1130771fa9c2f11"
+    },
+    {
+      "path": "assets/models/meadow_fruit.glb",
+      "bytes": 2287412,
+      "sha256": "461fd7e8fd5e7bfc369797e7d083448a9a8cf09df2a892cf7786cdb243a3465b"
+    },
+    {
+      "path": "assets/models/meadow_fruit_PolygonNatureBiomes_Meadow_Texture_01.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/meadow_fruit_leafPatch_01.png",
+      "bytes": 34354,
+      "sha256": "42428786b126dedde97903851f7c835b95d4c4475859a76d487ac97efdc4cf06"
+    },
+    {
+      "path": "assets/models/meadow_grass.glb",
+      "bytes": 135992,
+      "sha256": "6d5bc256127d0e73004aeade56f3505b2d9dbb481e45310e373528552f3a61af"
+    },
+    {
+      "path": "assets/models/meadow_grass_Grass_Short_01.png",
+      "bytes": 133567,
+      "sha256": "7303152ec64f68bb6552dab96b11afc38dd56e92dfd38ffc68da1cc2bf9ac42f"
+    },
+    {
+      "path": "assets/models/meadow_oak.glb",
+      "bytes": 2709804,
+      "sha256": "374f734dc081e3a6e946f13820dfba554175aac1e9ae3e2d5033867a6e4e8bcc"
+    },
+    {
+      "path": "assets/models/meadow_oak_Branches_01.png",
+      "bytes": 90270,
+      "sha256": "771c1dbcce86139d8d362d396421f781de0ffe07bbf7c54ee605a603fd232823"
+    },
+    {
+      "path": "assets/models/meadow_oak_PolygonNatureBiomes_Meadow_Texture_01.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/meadow_oak_leafPatch_04.png",
+      "bytes": 26373,
+      "sha256": "60d653d961f90e2f0b8b4b93c79b53de23dff99743b6de853830edce4804e79c"
+    },
+    {
+      "path": "assets/models/meadow_stonewall.glb",
+      "bytes": 2114472,
+      "sha256": "3ba0ed08959bad98f7f1f7f091509b6396a55a1f9064c6ee2d160b24ca47489d"
+    },
+    {
+      "path": "assets/models/meadow_stonewall_PolygonNatureBiomes_Meadow_Texture_01.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/meadow_tallgrass.glb",
+      "bytes": 262936,
+      "sha256": "07a36356d1125199e4dbc5ecc789deab521699cf4f06d6626f7b15beaab8870b"
+    },
+    {
+      "path": "assets/models/meadow_tallgrass_Grass_Mid_01.png",
+      "bytes": 259747,
+      "sha256": "9d6b1b6026b5e716912d56b4a9e38e48a72c84590364e744d3094f41e2db03f0"
+    },
+    {
+      "path": "assets/models/moss.glb",
+      "bytes": 27929216,
+      "sha256": "80cbec8810ec4f9d73dc649b621f3b6638e743a6a55565b6c25819e282a39e12"
+    },
+    {
+      "path": "assets/models/moss_boot_L.png",
+      "bytes": 1615480,
+      "sha256": "90af98406fcf12c913d3efcb1a5feb30dc436cf46108d221acfd2e099c377d28"
+    },
+    {
+      "path": "assets/models/moss_boot_R.png",
+      "bytes": 1453932,
+      "sha256": "9c0a5295736e351e26caed87cd0ed2ba22acaf31d7fd21aa533d86d2be554131"
+    },
+    {
+      "path": "assets/models/moss_button_cobalt.png",
+      "bytes": 113430,
+      "sha256": "e8c25a7673affdf90b45b6bd29bd7d2566a89ebcb6406591e83ad533d311fc87"
+    },
+    {
+      "path": "assets/models/moss_button_ivory.png",
+      "bytes": 289248,
+      "sha256": "6a00cba3c7e626981a248adad14775233f55ca39a1306f24995825efc04ebeb3"
+    },
+    {
+      "path": "assets/models/moss_chest_patch.png",
+      "bytes": 413333,
+      "sha256": "34a0b89cf51d84e2b923c8094e59f9f6e57c0c6fc46c608d802f4ad9a0a9652e"
+    },
+    {
+      "path": "assets/models/moss_eye_L.png",
+      "bytes": 94610,
+      "sha256": "34c4cf2f470403fc84559b6a082e2e588e5045ba1da613417a1d9da374c631be"
+    },
+    {
+      "path": "assets/models/moss_eye_R.png",
+      "bytes": 102656,
+      "sha256": "9100eabec7032a2fe495f122097d2bc95556b77a44b1ee29a050f74ad9af76f2"
+    },
+    {
+      "path": "assets/models/moss_face_lower.png",
+      "bytes": 313419,
+      "sha256": "f8221e08157398659a972a279d4a64feb7dfda20eb96b7069401fe05539909f7"
+    },
+    {
+      "path": "assets/models/moss_face_upper_and_bangs.png",
+      "bytes": 297604,
+      "sha256": "cc14b7e9ddeb8f8bd9a4bd34b99f19dc53ad9b9dd117afdaf74eb8184b32fd48"
+    },
+    {
+      "path": "assets/models/moss_fringe_L.png",
+      "bytes": 439310,
+      "sha256": "80a4b28459d4fc730c9941b30c9a3f66efa0044f18da75675c5f8bd0cae11c7a"
+    },
+    {
+      "path": "assets/models/moss_fringe_R.png",
+      "bytes": 445564,
+      "sha256": "d454cf639c27949fee257aaa7bd2c58772932e60b30f57ffa73e001767126983"
+    },
+    {
+      "path": "assets/models/moss_fringe_front_L.png",
+      "bytes": 422557,
+      "sha256": "54736be7c0aaf1b3a7822bb7fc9bd7fba20da07d78d64c539fbf45e5233f7b9b"
+    },
+    {
+      "path": "assets/models/moss_hand_L.png",
+      "bytes": 292504,
+      "sha256": "07803dd0b79cf0a7d23d62191152db75eb1d8b1c81bddcc27d5322c3660612b2"
+    },
+    {
+      "path": "assets/models/moss_hand_R.png",
+      "bytes": 295812,
+      "sha256": "28c080baaf2c5b4802da69e2995f02ed963057d454a9b080862f77c4b55cefa6"
+    },
+    {
+      "path": "assets/models/moss_heart_patch.png",
+      "bytes": 121744,
+      "sha256": "84779dc104b5467895cf6f2707c18d79942472297743d540fd8e8bf33de915c3"
+    },
+    {
+      "path": "assets/models/moss_hood_back_fringe.png",
+      "bytes": 445374,
+      "sha256": "6a949a7a24fdeb436c353b823994b2655078284eab71462656e8143124fc0f54"
+    },
+    {
+      "path": "assets/models/moss_hood_ears.png",
+      "bytes": 1670796,
+      "sha256": "5181ce43376834b24dbeb7fde5f7da0a05bfb0e4e253944b0f4308ed48af17ac"
+    },
+    {
+      "path": "assets/models/moss_hood_inner.png",
+      "bytes": 1287135,
+      "sha256": "7b3d295ba50aed75f4bf2fbbdc1a8a2a14cb9b67e9530556beaa4ea399cd77ca"
+    },
+    {
+      "path": "assets/models/moss_hood_outer.png",
+      "bytes": 6437927,
+      "sha256": "ed4a71bf3cc421aedd58f1fe4a88ec9075ded9cefbe7322be4dd0e3d25af31e7"
+    },
+    {
+      "path": "assets/models/moss_onesie_body.png",
+      "bytes": 3969042,
+      "sha256": "86aef00277bd0af0aa5db8ad3ca083f10682730818051da27a51c685fede7cdb"
+    },
+    {
+      "path": "assets/models/moss_sleeve_L.png",
+      "bytes": 1327424,
+      "sha256": "4684485e32d59462a55fdeb2a8c3f6f3b7d29101d085545e89d635ec3779cbd6"
+    },
+    {
+      "path": "assets/models/moss_sleeve_R.png",
+      "bytes": 1313649,
+      "sha256": "58e163954559e6e54e6712a84802e8d7577843fd108146e935abf5051cb43381"
+    },
+    {
+      "path": "assets/models/moss_thigh_patch.png",
+      "bytes": 489499,
+      "sha256": "6719b8c11b4fdc19bcc3e23a566f972fdbaf40b519e8160cb4ec62944368dccd"
+    },
+    {
+      "path": "assets/models/mushroom_red.glb",
+      "bytes": 6416,
+      "sha256": "f5339a8208d653cd1b9736e401480485e93db9b7b9fa539d3bccef568364984b"
+    },
+    {
+      "path": "assets/models/mushroom_tan.glb",
+      "bytes": 5820,
+      "sha256": "cad09cebe87c9d1db0c6dffee4e1def3051c8af48ba9160f4924b40127a7d170"
+    },
+    {
+      "path": "assets/models/paving_limestone.glb",
+      "bytes": 38812,
+      "sha256": "37e83b60765c836c5d06c88a3555243e65a178187cd27f17ef6e7c4f6c7ab595"
+    },
+    {
+      "path": "assets/models/paving_sandstone.glb",
+      "bytes": 38812,
+      "sha256": "1c7afe82aa10771af535db15c4594843b52bb9bbcd8675112321886821a9bedd"
+    },
+    {
+      "path": "assets/models/paving_slate.glb",
+      "bytes": 38808,
+      "sha256": "b0be159f84e926833f9dbb5d24434e5eb9db4185e8a45f00196e99c20655e0af"
+    },
+    {
+      "path": "assets/models/rock_largeA.glb",
+      "bytes": 7424,
+      "sha256": "1d884001611b0df77d58f7cc79199dfec8265492f8fec3321d9cb409fdb95d6e"
+    },
+    {
+      "path": "assets/models/statue_ring.glb",
+      "bytes": 6536,
+      "sha256": "6065b09362d5deaaa945aa4c83fd3af829f38f05a68975d762f09acccddf37f0"
+    },
+    {
+      "path": "assets/models/stock_bridge.glb",
+      "bytes": 1971396,
+      "sha256": "f78f94f2902878d3678e80e570b657769f1745d0c191c37fc506aeb4e4adfac6"
+    },
+    {
+      "path": "assets/models/stock_bridge_MeadowArchitecture.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/stock_windmill.glb",
+      "bytes": 2253036,
+      "sha256": "f37c2c2566298a29420ce17500a4137e3b4fe63412e2ecab23149a3e31e9bef3"
+    },
+    {
+      "path": "assets/models/stock_windmill_MeadowArchitecture.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/stock_windmill_blades.glb",
+      "bytes": 2019576,
+      "sha256": "a096a2b2db9bd978ce27769e44b2b6dd44cbc9d19b54c76030bf3f3866cd6a6e"
+    },
+    {
+      "path": "assets/models/stock_windmill_blades_MeadowArchitecture.png",
+      "bytes": 1854324,
+      "sha256": "0d39f3950838eaec5833f2143ff8284daccc293bf3abc659721affb5d46a0d1a"
+    },
+    {
+      "path": "assets/models/tent_detailedOpen.glb",
+      "bytes": 14312,
+      "sha256": "f9fd07e785e0e5cade9df10ece29ff94601c61f8a3ad61a1605ed636fc275841"
+    },
+    {
+      "path": "assets/models/terrain.glb",
+      "bytes": 4836592,
+      "sha256": "9fb44225319829583631b0fe6d0a175e8b156fad1cfc304b3e08bf8285dc0e03"
+    },
+    {
+      "path": "assets/models/terrain_painted-earth.jpg",
+      "bytes": 323773,
+      "sha256": "663a04c5c67b9de4d5bfa73588c09a9f1b8fdc87e453516ea142623d34b80a60"
+    },
+    {
+      "path": "assets/models/threadmaker_house.glb",
+      "bytes": 17146216,
+      "sha256": "f3384e5b162f284175884b163f7a4641a91fbfbd7bbe3c8d069761758b2cb342"
+    },
+    {
+      "path": "assets/models/threadmaker_house_threadmaker_house__painted_0.png",
+      "bytes": 16750939,
+      "sha256": "6eb260f04adba788d0abb664269aee107bdd7959376f771bd89e274605785eb3"
+    },
+    {
+      "path": "assets/models/valley_bird.glb",
+      "bytes": 228220,
+      "sha256": "12e84c00660dc1a15f9451ba2daa0e572da8c0c0c860cecec4b70d0eb78f72f6"
+    },
+    {
+      "path": "assets/models/valley_butterfly.glb",
+      "bytes": 4936,
+      "sha256": "9ee3fb08fc6bd80121fe1c7770322b050252505b71b5d4e19354bce78eba02fe"
+    },
+    {
+      "path": "assets/models/valley_butterfly_Image.png",
+      "bytes": 177,
+      "sha256": "49867e7aaf7cac1a1d965a4906dcd1339486b029877f354a1ef2d91facdad0e9"
+    },
+    {
+      "path": "assets/models/village_pavilion.glb",
+      "bytes": 35004,
+      "sha256": "385ef1078a948f65f37b774ac40698ee508054ca948d9473518eea904b509d48"
+    },
+    {
+      "path": "assets/textures/Butterfly_01.png",
+      "bytes": 250498,
+      "sha256": "fd100d51ac683e842b973dd78ae6f835c6a1cf12ffebb0453a3b2d1f95cd5fe9"
+    },
+    {
+      "path": "assets/textures/Butterfly_02.png",
+      "bytes": 239353,
+      "sha256": "216b776653095f97150f9d08e08e19acd570e7d85defa0ec26507181c7aaf3a4"
+    },
+    {
+      "path": "assets/textures/Butterfly_03.png",
+      "bytes": 216428,
+      "sha256": "53b2bcd1a6bed764de4e0601bc736b11ec530d766308521759a0e62c80ff81fd"
+    },
+    {
+      "path": "assets/textures/painted-earth.jpg",
+      "bytes": 323773,
+      "sha256": "663a04c5c67b9de4d5bfa73588c09a9f1b8fdc87e453516ea142623d34b80a60"
+    },
+    {
+      "path": "assets/ui/NotoSansSC.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    {
+      "path": "assets/ui/Stitchwild.ttf",
+      "bytes": 362608,
+      "sha256": "eed9a11269441e48936208d2c1dcf1a9fde15bb23afd8f1912446f1d1c2de651"
+    },
+    {
+      "path": "assets/ui/bonbon.png",
+      "bytes": 1491434,
+      "sha256": "0ba6dc5b2e24a572a185e742abc5c9a0fdafab41aad27e721e7f4607a2ec014e"
+    },
+    {
+      "path": "assets/ui/candy.png",
+      "bytes": 1054882,
+      "sha256": "25e24ce7cfd46fb130d028bf77e5a786c01f70b912923d65f62b5691b4656430"
+    },
+    {
+      "path": "assets/ui/canopy.png",
+      "bytes": 3137162,
+      "sha256": "95018b1db464fc1eccd6a674ab3418ebf4dd0d2ff262d24dd795d467d9547699"
+    },
+    {
+      "path": "assets/ui/cover.png",
+      "bytes": 2422665,
+      "sha256": "8b22f0727d0e5e823103044399075d97f85f8db540f6997911aa56f31ec68be1"
+    },
+    {
+      "path": "assets/ui/creek.png",
+      "bytes": 2965017,
+      "sha256": "396d6362586fbbc81be0d73e48f327c1159cb72b396b2669e6411a50ef193a4c"
+    },
+    {
+      "path": "assets/ui/lilac.png",
+      "bytes": 1451949,
+      "sha256": "09e8106eec195cc9371f2ea1eb4dd8fb3eaf33b02e97428b59667480e6959c06"
+    },
+    {
+      "path": "assets/ui/meadow.png",
+      "bytes": 2890347,
+      "sha256": "2dda48a10bff0a49314fcb2739ef96e1a57c7140d186ece95b38cd65fbff35a3"
+    },
+    {
+      "path": "assets/ui/moss.png",
+      "bytes": 1054605,
+      "sha256": "981dac19e6d9d864a8da8afa2ecce3b2a47060c0fe79f3aae684c620bdbaa5c6"
+    },
+    {
+      "path": "assets/ui/pearl.png",
+      "bytes": 529864,
+      "sha256": "25348c17a67b4fd46e3c183115047f0f0e2789df964f8746d743e0a2eeea7ffd"
+    },
+    {
+      "path": "assets/ui/poster-bonbon.png",
+      "bytes": 2658887,
+      "sha256": "8e5b3c181211f301d096ad9e3241138fafe3cf447012b82965b758f698cb1480"
+    },
+    {
+      "path": "assets/ui/poster-candy.png",
+      "bytes": 2602096,
+      "sha256": "35e5bac9fcdad87d9bf2844ddecacbe0e05df97e685498925effb47da1150b34"
+    },
+    {
+      "path": "assets/ui/poster-lilac.png",
+      "bytes": 2915854,
+      "sha256": "70b5725f8c541618efc1637baf834f3ad3a9b307486261f2acdb432ba9836e8e"
+    },
+    {
+      "path": "assets/ui/poster-moss.png",
+      "bytes": 2896519,
+      "sha256": "e00994f7a23466c9fda2dae24c1a085cf964b37096d5d27e579688f7ddd45a06"
+    },
+    {
+      "path": "assets/ui/poster-pearl.png",
+      "bytes": 2836953,
+      "sha256": "2165ec31116f4709e2176c86c42ca14ba1c65268943722aa54370e8bb81efdbd"
+    },
+    {
+      "path": "data/moss-motion.json",
+      "bytes": 2081328,
+      "sha256": "2146bf1aeb62a661425648d870e3f7e56df1f0f6a235af137f9089e9a3164fc1"
+    },
+    {
+      "path": "data/world.json",
+      "bytes": 13068289,
+      "sha256": "db299ffb1c45ce0b694a21b81286ec993b0f13e1456e3a229b396a9b2446d4db"
+    },
+    {
+      "path": "export_presets.cfg",
+      "bytes": 830,
+      "sha256": "39f95bbad315f505622d9de200ff0cf80eb5b572372a0b284ce154fe9fb619bc"
+    },
+    {
+      "path": "licenses/ASSET-SOURCES.md",
+      "bytes": 1225,
+      "sha256": "9dff29923338eb605541554806b92f5ca782130924cd4009036b1ec58d2a804d"
+    },
+    {
+      "path": "licenses/Godot-demo-MIT.txt",
+      "bytes": 1134,
+      "sha256": "0339177149b474f7ff676d32218ecb3a8f2538955610023c3769763720d09e4c"
+    },
+    {
+      "path": "licenses/NotoSansSC-OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "licenses/React-Bits.md",
+      "bytes": 2578,
+      "sha256": "f1f32cf23fba1c4d2b370de8e1fbe47d7e308271ea8b9f40c3292634bea4c1c5"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 889,
+      "sha256": "0b9dd18d8d91cee155b10074fe5f60aeca680ae021be6f671b52cb8181dc6f4b"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "bytes": 165,
+      "sha256": "14d4238f7e8305c21e8f7535897114f806f81bd96d2cbdd94f0942f7b775e8a2"
+    },
+    {
+      "path": "scripts/game.gd",
+      "bytes": 17938,
+      "sha256": "1929e043e5c52465dedc40ff2fc022488a46c93415de4ed154ae0cf04c56d18c"
+    },
+    {
+      "path": "scripts/hero.gd",
+      "bytes": 10688,
+      "sha256": "e03eda8be3bbc9ba3a341980b218a8c782fd1924289a6014d1d9f17df5355875"
+    },
+    {
+      "path": "scripts/journey_menu.gd",
+      "bytes": 10038,
+      "sha256": "a72662afdc47a3e8301ff07ec48cfd805d9a5a88be7b7e29bc05c81e7ffcd510"
+    },
+    {
+      "path": "scripts/planet_map.gd",
+      "bytes": 1068,
+      "sha256": "b4f96bf6032dd1cc7a909eb685ede7c8f8422e204218c6e16f0b33230cfd548d"
+    },
+    {
+      "path": "scripts/planet_world.gd",
+      "bytes": 11932,
+      "sha256": "e5998cb7106eab59c71d3c4e41b925f38ca7294900d79599d75941a9b673cb9b"
+    },
+    {
+      "path": "shaders/butterfly.gdshader",
+      "bytes": 293,
+      "sha256": "68adab68a13aad818304b187fab582cd61946018523c4b054756dc714ff5e48b"
+    },
+    {
+      "path": "shaders/caustics.gdshaderinc",
+      "bytes": 482,
+      "sha256": "354ca691fd08e24c15d5908c6ae905a754d9ef35a2ea500c6068991fce553cb1"
+    },
+    {
+      "path": "shaders/foliage.gdshader",
+      "bytes": 913,
+      "sha256": "a915c18eaf733055b6b6e7c4ea2d29e7a944fd1b3d847ca089f095a44550ee5c"
+    },
+    {
+      "path": "shaders/meadow.gdshader",
+      "bytes": 1236,
+      "sha256": "4f0ad064f7cd4700603a667624911bc28f4cc48e4f5bb7626f08ccad2bdc2125"
+    },
+    {
+      "path": "shaders/menu_shade.gdshader",
+      "bytes": 214,
+      "sha256": "3062fb31aa68e6746cae5574e1dcf6d32d2659abbbb54dbadcca038db642b549"
+    },
+    {
+      "path": "shaders/menu_shine.gdshader",
+      "bytes": 421,
+      "sha256": "f2ab9daaa4b934d37e69a7dc080000e55b0b2a7c4c15121022da063ba4098795"
+    },
+    {
+      "path": "shaders/water.gdshader",
+      "bytes": 529,
+      "sha256": "50683f044f595770fd0ea92128e1283b00e8d8072fa88c94140e7d44e57eeb24"
+    },
+    {
+      "path": "shaders/web_depth.gdshader",
+      "bytes": 1053,
+      "sha256": "d476f40d8b9de24719bef9d736435ab4d57e26e5de00353e85bd7658a8a0613e"
+    },
+    {
+      "path": "shaders/web_sunshaft.gdshader",
+      "bytes": 328,
+      "sha256": "d82340eed0e342fcc7f2fdbf51df06f35eb3b1d2ff95ddcc884f5ccf8f9041a2"
+    }
+  ],
+  "pack_sha256": "9fd7a16377d36a9521ee997ac3fa4cd35eea7c7d939adb87171f494f0ff67aaf"
+}
