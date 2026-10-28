@@ -1,9 +1,0 @@
-{
-  "loader": "unity/Build/unity.loader.js?v=dad2d045384a",
-  "framework": "unity/Build/unity.framework.js?v=f8dfca48859d",
-  "data": "unity/Build/unity.data?v=e235cc0a7458",
-  "wasm": "unity/Build/unity.wasm?v=a43acf34e39b",
-  "characters": [
-    "moss"
-  ]
-}
