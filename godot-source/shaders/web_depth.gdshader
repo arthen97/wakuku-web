@@ -16,12 +16,14 @@ void fragment(){
  vec2 pixel=vec2(1.)/VIEWPORT_SIZE;
  vec3 color=texture(scene_color,uv).rgb;
  float weight=1.;
- for(int i=0;i<8;i++){
-  float angle=float(i)*.785398;
+ if(blur>.08){
+ for(int i=0;i<4;i++){
+  float angle=float(i)*1.570796+.785398;
   vec2 sample_uv=clamp(uv+vec2(cos(angle),sin(angle))*pixel*blur,vec2(.001),vec2(.999));
   float edge=1.-smoothstep(.5,3.,abs(distance_at(sample_uv,INV_PROJECTION_MATRIX)-depth));
   color+=texture(scene_color,sample_uv).rgb*edge;
   weight+=edge;
+ }
  }
  ALBEDO=color/weight;
 }

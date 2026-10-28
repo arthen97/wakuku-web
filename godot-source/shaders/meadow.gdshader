@@ -14,7 +14,7 @@ void fragment(){
  float grain=noise(world.xz*9.)*.025;
  vec3 paint=texture(painted_ground,world.xz*.12).rgb;
  float brush=dot(paint,vec3(.3,.5,.2));
- ALBEDO=(mix(grass,soil,footpath*.82)+grain)*(.83+brush*1.15);
+ ALBEDO=(mix(grass,soil,footpath*.82)+grain)*(.84+brush*.48);
  float bank=1.-smoothstep(1.6,3.1,abs(world.z+23.));
  if(bank>.001){
   float caustic=creek_caustics(world.xz*2.8,TIME)*bank;

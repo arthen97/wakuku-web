@@ -4,14 +4,14 @@ A small planet story about tending one flower, repairing a wind bell and making 
 
 [Play online](https://p0itacli4cxv.app.stg.medeo.ai/)
 
-## V10.2 — 2026-10-28
+## V10.4 — 2026-10-29
 
 The Godot cinematic preview is now a complete HTML / WebGL 2 release. Only Moss and Windbell Meadow are currently playable; four travellers and two destinations remain clearly marked previews.
 
 - Five original character campaign posters replace all white-background model cards.
 - Free mouse orbit is requested directly by the entry click; click the scene to recapture after Esc.
 - 21:9 framing, character/destination selection, Chinese narrative and choice ending.
-- All 56,876 world instances, imported textured models, 25 bones / 9 animation takes, map and Chinese audio are included in the pack.
+- All 56,877 world instances, imported textured models, 25 bones / 9 animation takes, map and Chinese audio are included in the pack.
 - Subtle depth-aware distance blur, warm/cool film grading, glow and creek caustics.
 - Browser rendering uses transparent sunlight shafts instead of native Forward+ volumetric fog; native camera DOF is replaced by a lightweight depth shader. The browser is not a pixel-identical Forward+ renderer.
 - Autosave, localStorage mirror and manual JSON save export/import. Saves are private to each browser; no player save is distributed in the build.
@@ -44,7 +44,7 @@ The Godot WebGL runtime, assets and UI are prebuilt. No runtime AI service or AP
 
 ## Versions
 
-- `v0.10.2`: Godot HTML cinematic chapter, five character posters, free mouse camera and safe camera pitch. Earlier Unity versions remain available in their original tags.
+- `v0.10.4`: Godot HTML cinematic chapter, five character posters, free mouse camera and safe camera pitch. Earlier Unity versions remain available in their original tags.
 
 - `v0.7.0`: preserved original baseline, previously published as menv v1.
 - `v0.8.0`: architecture and sound update; preserved as menv v2.
@@ -56,3 +56,11 @@ The castle is an exterior landmark; there is no interior level. The cover is an 
 ## Rights
 
 Deployment repository, not a standalone asset library. Third-party content retains its original terms. See [Credits](docs/CREDITS.md) and [V8 additions](docs/CREDITS-V8.md) and [V9 additions](docs/CREDITS-V9.md). See also [V9.1 additions](docs/CREDITS-V9.1.md). Editable Godot, Unity and Blender authoring files remain in the local project. Godot runtime source is included in `godot-source/`; original asset files are compiled into the game pack. See `godot-source/licenses/` for additional credits and Noto Sans SC OFL license.
+
+### v0.10.3 terrain contact
+
+113 trees reseated using their transformed lower contours against the shipped terrain. 16 buildings and structures have terrain-conforming foundations. The mill rotor retains its offset from its parent. Five illustrated character posters and free mouse orbit are retained.
+
+### v0.10.4 clarity and resource efficiency
+
+Reduced ground overbrightening, exposure 0.76 and sunlight 0.95. 4x MSAA and foliage alpha-to-coverage, Retina-aware canvas up to 2520×1080, fixed 550-weight Chinese font with MSDF rendering. Identical texture images are shared, runtime images use Basis Universal compression, unused legacy resources remain in the authoring project. Near pixels skip the distance blur; far pixels use four samples.

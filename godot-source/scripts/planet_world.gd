@@ -145,6 +145,8 @@ func _collect(n: Node, parent: Transform3D, out: Array, atom: String) -> void:
 				if material.transparency!=BaseMaterial3D.TRANSPARENCY_DISABLED:
 					material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 					material.alpha_scissor_threshold=.42
+					material.alpha_antialiasing_mode=BaseMaterial3D.ALPHA_ANTIALIASING_ALPHA_TO_COVERAGE
+					material.alpha_antialiasing_edge=.42
 					material.cull_mode=BaseMaterial3D.CULL_DISABLED
 				if atom=="cloud_cumulus_soft":
 					material.albedo_color=Color(.97,.98,.91)
@@ -175,7 +177,7 @@ func _lighting() -> void:
 	environment.ambient_light_energy=.52
 	environment.reflected_light_source=Environment.REFLECTION_SOURCE_SKY
 	environment.tonemap_mode=Environment.TONE_MAPPER_ACES
-	environment.tonemap_exposure=.9
+	environment.tonemap_exposure=.76
 	# Restrained film curve: cool shadow floor and warm, compressed highlights.
 	environment.adjustment_enabled=true
 	environment.adjustment_contrast=1.04
@@ -213,7 +215,7 @@ func _lighting() -> void:
 	sun.name="Morning sunlight"
 	sun.rotation_degrees=Vector3(-32,-32,0)
 	sun.light_color=Color("fff0c6")
-	sun.light_energy=1.2
+	sun.light_energy=.95
 	sun.light_volumetric_fog_energy=3.0
 	sun.shadow_enabled=true
 	sun.directional_shadow_max_distance=80
@@ -223,7 +225,7 @@ func _lighting() -> void:
 	var fill:=DirectionalLight3D.new()
 	fill.rotation_degrees=Vector3(-65,140,0)
 	fill.light_color=Color("b6dbe6")
-	fill.light_energy=.22
+	fill.light_energy=.18
 	add_child(fill)
 	# Two canopy apertures strengthen the same morning-sun direction.
 	for p in [Vector3(-6,8,-9),Vector3(8,10,-32)]:
@@ -234,7 +236,7 @@ func _lighting() -> void:
 		beam.spot_angle=12
 		beam.spot_angle_attenuation=.65
 		beam.light_color=Color("fff0bc")
-		beam.light_energy=2.2
+		beam.light_energy=1.3
 		beam.light_volumetric_fog_energy=9
 		add_child(beam)
 		if OS.has_feature("web"):

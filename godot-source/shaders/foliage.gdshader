@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode cull_disabled,diffuse_burley;
+render_mode cull_disabled,diffuse_burley,alpha_to_coverage;
 uniform sampler2D albedo_tex:source_color,filter_linear_mipmap_anisotropic;
 uniform vec4 tint:source_color=vec4(1.);
 uniform vec3 walker=vec3(999.);
@@ -18,4 +18,4 @@ void vertex(){
  }
  sunlight=.12;
 }
-void fragment(){vec4 c=texture(albedo_tex,UV)*tint;ALBEDO=tint.rgb*(.8+c.r*.2);ALPHA=texture(albedo_tex,UV).r;ALPHA_SCISSOR_THRESHOLD=.42;ROUGHNESS=.94;SPECULAR=.04;BACKLIGHT=c.rgb*.25;}
+void fragment(){vec4 c=texture(albedo_tex,UV)*tint;ALBEDO=tint.rgb*(.76+c.r*.18);ALPHA=texture(albedo_tex,UV).r;ALPHA_SCISSOR_THRESHOLD=.42;ALPHA_ANTIALIASING_EDGE=.42;ALPHA_TEXTURE_COORDINATE=UV*vec2(textureSize(albedo_tex,0));ROUGHNESS=.94;SPECULAR=.04;BACKLIGHT=c.rgb*.2;}

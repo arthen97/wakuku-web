@@ -43,7 +43,7 @@ var hints:=["走近银白小花，按 E 倾听。","溪水在石桥前。沿浅�
 
 func _ready()->void:
 	_setup_input()
-	font=load("res://assets/ui/NotoSansSC.ttf")
+	font=load("res://assets/ui/NotoSansSC-Medium.ttf")
 	_create_ui()
 	_audio()
 	await get_tree().process_frame
@@ -158,6 +158,8 @@ func _label(parent:Node,text:String,p:Vector2,s:Vector2,fs:int=18,c:Color=Color(
 	l.add_theme_font_size_override("font_size",fs)
 	l.add_theme_color_override("font_color",c)
 	l.add_theme_color_override("font_shadow_color",Color(0,.08,.06,.65))
+	l.add_theme_color_override("font_outline_color",Color(.02,.07,.05,.7))
+	l.add_theme_constant_override("outline_size",2)
 	l.add_theme_constant_override("shadow_offset_y",2)
 	l.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	return l
