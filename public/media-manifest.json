@@ -1,0 +1,46 @@
+{
+  "release": "0.11.0",
+  "video_model_requested": "doubao-seedance-2.5",
+  "video_model_returned": "dreamina-seedance-2-5-260628",
+  "image_generation": "Built-in imagegen; original WAKUKU character reference posters",
+  "style_reference": "https://www.picaa.com/sowii/",
+  "reference_video_reused": false,
+  "videos": [
+    "15-second ensemble opening",
+    "8-second traveller source loop",
+    "10-second destination source loop"
+  ],
+  "delivery": "H264, 1470x630, muted; selection loop seam crossfaded",
+  "files": [
+    {
+      "path": "menu-destination.mp4",
+      "bytes": 1837326,
+      "sha256": "eff86d6e9bf6899266e192bf2d3fdcdd9e9e2280bc7ba59ed0d2ab60084ff07a"
+    },
+    {
+      "path": "menu-opening.mp4",
+      "bytes": 3230105,
+      "sha256": "804c314673e42dd1ce7c588407f3628a1c6ccbf0b5eda82a94db5da022facce4"
+    },
+    {
+      "path": "menu-ensemble.webp",
+      "bytes": 361122,
+      "sha256": "dd7c45d3985bb167789cd61ec8139ec43f6f8e2d772067a8ac4b339e1153ebc6"
+    },
+    {
+      "path": "menu-travellers.mp4",
+      "bytes": 1253050,
+      "sha256": "da29b94a10708c922280aea14e027874c2c5509720bc4271b59e5c440b686473"
+    },
+    {
+      "path": "menu-destination.webp",
+      "bytes": 451336,
+      "sha256": "d496c8317211bd394c733c48d5a04ac79925054c9a8e385598e8ea4169980a84"
+    },
+    {
+      "path": "menu-score.ogg",
+      "bytes": 404476,
+      "sha256": "068a77aafd503052cfa46b7512d3d88efbd075dd0e7a64a8a992e8a90d4e78e8"
+    }
+  ]
+}

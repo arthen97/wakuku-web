@@ -1,5 +1,5 @@
 {
-  "version": "0.10.5",
+  "version": "0.11.0",
   "date": "2026-10-29",
   "engine": "Godot 4.7.2 WebGL 2 / single thread",
   "aspect": "21:9",
@@ -23,6 +23,20 @@
     "ACES, color curve, glow, depth fog and creek caustics retained"
   ],
   "save": "IndexedDB plus localStorage mirror and JSON export/import; native save can be imported, never distributed to other players",
+  "menu": {
+    "video_model": "doubao-seedance-2.5",
+    "opening_seconds": 15,
+    "selection_loops": [
+      "travellers",
+      "destination"
+    ],
+    "playable_characters": [
+      "moss"
+    ],
+    "playable_destinations": [
+      "meadow"
+    ]
+  },
   "source_files": [
     {
       "path": "README.md",
@@ -705,6 +719,16 @@
       "sha256": "2dda48a10bff0a49314fcb2739ef96e1a57c7140d186ece95b38cd65fbff35a3"
     },
     {
+      "path": "assets/ui/menu-destination.webp",
+      "bytes": 451336,
+      "sha256": "d496c8317211bd394c733c48d5a04ac79925054c9a8e385598e8ea4169980a84"
+    },
+    {
+      "path": "assets/ui/menu-ensemble.webp",
+      "bytes": 361122,
+      "sha256": "dd7c45d3985bb167789cd61ec8139ec43f6f8e2d772067a8ac4b339e1153ebc6"
+    },
+    {
       "path": "assets/ui/moss.png",
       "bytes": 1054605,
       "sha256": "981dac19e6d9d864a8da8afa2ecce3b2a47060c0fe79f3aae684c620bdbaa5c6"
@@ -786,8 +810,8 @@
     },
     {
       "path": "scripts/game.gd",
-      "bytes": 18066,
-      "sha256": "018af46592000bbea3ea8b64ed5620e08970ed242ea00a1508ac49b7ab2e2420"
+      "bytes": 18307,
+      "sha256": "974da6c7588aeb3ea4bf228785f8b17bf1868c714377fb080bb8c7718dbd6d33"
     },
     {
       "path": "scripts/hero.gd",
@@ -796,8 +820,8 @@
     },
     {
       "path": "scripts/journey_menu.gd",
-      "bytes": 10038,
-      "sha256": "a72662afdc47a3e8301ff07ec48cfd805d9a5a88be7b7e29bc05c81e7ffcd510"
+      "bytes": 10975,
+      "sha256": "8ac5a24679187b7d8c03a6d022fca72d1f39e538e317f33f8ad1645b8e340225"
     },
     {
       "path": "scripts/planet_map.gd",
@@ -855,5 +879,5 @@
       "sha256": "d82340eed0e342fcc7f2fdbf51df06f35eb3b1d2ff95ddcc884f5ccf8f9041a2"
     }
   ],
-  "pack_sha256": "b98d01bc4234439a6ff6c6ed34ad97a69bdbb2e253f74714f714d3722de5a527"
+  "pack_sha256": "503411363e09d4157ecb733fae9492302b2d30d8d99519278eee5b77c8e1904a"
 }

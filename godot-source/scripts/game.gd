@@ -221,6 +221,8 @@ func _setup_story()->void:
 func _start()->void:
 	if not ready_to_play:return
 	title.visible=false
+	music.stream_paused=false
+	ambience.stream_paused=false
 	started=true
 	paused=false
 	hero.active=true
@@ -235,6 +237,10 @@ func _return_to_menu()->void:
 	hero.active=false
 	hero.velocity=Vector3.ZERO
 	hero.release_look()
+	if OS.has_feature("web"):
+		music.stream_paused=true
+		ambience.stream_paused=true
+		speech.stop()
 	if is_instance_valid(ending):ending.queue_free();ending=null
 	title.set_ready(quest_step>0)
 	title.reopen()
@@ -252,6 +258,9 @@ func _audio()->void:
 	ambience.stream.loop=true
 	ambience.volume_db=-32
 	ambience.play()
+	if OS.has_feature("web"):
+		music.stream_paused=true
+		ambience.stream_paused=true
 	speech=AudioStreamPlayer.new()
 	add_child(speech)
 	speech.volume_db=-1

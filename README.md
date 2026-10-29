@@ -4,6 +4,15 @@ A small planet story about tending one flower, repairing a wind bell and making 
 
 [Play online](https://p0itacli4cxv.app.stg.medeo.ai/)
 
+## V11 — 2026-10-29
+
+- Original five-character garden opening generated with Merouter Seedance 2.5, following the gentle fixed-camera CG garden staging of the Sowii reference.
+- Three real video assets: a 15-second welcome, a quiet traveller loop and a destination garden loop. No footage from the reference site is redistributed.
+- New 21:9 HTML menus with a five-traveller ensemble, readable selection controls, progress feedback, pause animation and optional menu music.
+- Only the current video plays. Background tabs and gameplay pause the menu videos/music; two loops have blended seams and all clips have fast-start H264 encoding.
+- Playable content remains Moss / Windbell Meadow; other characters and destinations are marked as upcoming. Existing saves and Chinese narration are retained.
+- `public/media-manifest.json` records the new media and hashes. The menu garden is cinematic key art, not a real-time game screenshot.
+
 ## V10.5 — 2026-10-29
 
 The Godot cinematic preview is now a complete HTML / WebGL 2 release. Only Moss and Windbell Meadow are currently playable; four travellers and two destinations remain clearly marked previews.

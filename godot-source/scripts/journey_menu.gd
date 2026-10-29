@@ -10,6 +10,9 @@ var status:Label
 var next_button:Button
 var restart_box:CheckBox
 var transitioning:=false
+var web_menu:JavaScriptObject
+var web_menu_callback:JavaScriptObject
+var backdrop:TextureRect
 const INK=Color("102c2d")
 const GOLD=Color("e9d6a2")
 const CREAM=Color("fff5da")
@@ -17,7 +20,13 @@ const CREAM=Color("fff5da")
 func _ready()->void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter=Control.MOUSE_FILTER_STOP
-	var backdrop:=_image(self,"cover",Vector2.ZERO,Vector2(1680,720))
+	if OS.has_feature("web"):
+		web_menu=JavaScriptBridge.get_interface("wakukuMenu")
+		if web_menu:
+			web_menu_callback=JavaScriptBridge.create_callback(_web_action)
+			web_menu.bind(web_menu_callback)
+			return
+	backdrop=_image(self,"cover",Vector2.ZERO,Vector2(1680,720))
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var veil:=ColorRect.new()
 	add_child(veil)
@@ -39,17 +48,36 @@ func _ready()->void:
 	_build_page()
 
 func set_progress(value:float)->void:
+	if web_menu:
+		web_menu.progress(value)
+		return
 	status.text="正在铺开小星球  ·  %d%%"%int(value*100)
 func set_ready(saved:bool)->void:
 	available=true
 	has_save=saved
+	if web_menu:
+		web_menu.ready(saved)
+		return
 	status.text="小星球已准备好  ·  当前为首个环境的可玩预览"
 	if stage==2 and is_instance_valid(next_button):next_button.disabled=false
 func reopen()->void:
 	visible=true
 	modulate.a=1.
 	stage=0
+	if web_menu:
+		web_menu.open()
+		return
 	_build_page()
+
+func _web_action(args:Array)->void:
+	if args.is_empty():return
+	if str(args[0])=="sound":
+		ui_sound.emit()
+	elif str(args[0])=="enter" and available and not transitioning:
+		transitioning=true
+		if JavaScriptBridge.eval("document.hasFocus()",true):Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+		enter_requested.emit(bool(args[1]) if args.size()>1 else false)
+		transitioning=false
 
 func _text(parent:Node,value:String,p:Vector2,s:Vector2,fs:int=20,color:Color=CREAM)->Label:
 	var l:=Label.new()
@@ -96,6 +124,7 @@ func _button(parent:Node,value:String,p:Vector2,s:Vector2,callback:Callable,prim
 	return b
 
 func _build_page()->void:
+	backdrop.texture=load("res://assets/ui/menu-destination.webp" if stage==2 else "res://assets/ui/menu-ensemble.webp")
 	for child in body.get_children():
 		body.remove_child(child)
 		child.queue_free()
